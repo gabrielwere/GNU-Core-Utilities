@@ -12,9 +12,6 @@ int main(int argc,char *argv[]){
 	int flag;
 
 	int l_flag = 0;
-	int t_flag = 0;
-	int u_flag = 0;
-	int c_flag = 0;
 	int R_flag = 0;
 	int flags = 0;
 
@@ -30,15 +27,6 @@ int main(int argc,char *argv[]){
 				switch(flag){
 					case 'l':
 						l_flag++;
-						break;
-					case 't':
-						t_flag++;
-						break;
-					case 'u':
-						u_flag++;
-						break;
-					case 'c':
-						c_flag++;
 						break;
 					case 'R':
 						R_flag++;
