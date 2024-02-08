@@ -1,5 +1,7 @@
 #include <time.h>
 
+#include "structs.h"
+
 char *give_time(long time_in_seconds){
   
 	//this is the format of the string returned
@@ -10,5 +12,6 @@ char *give_time(long time_in_seconds){
 	*(time_string + 24) = '\0';
 
 	return time_string;
-
 }
+
+

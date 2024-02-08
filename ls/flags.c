@@ -12,7 +12,7 @@ void handle_l_flag(char *filename){
 	struct stat dir_info;
 	
 	if(stat(filename,&file_info) == -1){
-		fprintf(stderr,"cannot access \'%s\': No such file or directory\n",filename);
+		fprintf(stderr,"\ncannot access \'%s\': No such file or directory\n",filename);
 		return;
 	}
 	
@@ -21,7 +21,7 @@ void handle_l_flag(char *filename){
 		DIR *Dir;
 
 		if((Dir = opendir(filename)) == NULL){
-			fprintf(stderr,"cannot access \'%s\': No such file or directory",filename);
+			fprintf(stderr,"\ncannot access \'%s\': No such file or directory",filename);
 			return;
 		}
 
@@ -35,7 +35,7 @@ void handle_l_flag(char *filename){
 			sprintf(full_path_name,"%s/%s",filename,Dirent->d_name);
 
 			if(stat(full_path_name,&file_info) == -1){
-				fprintf(stderr,"cannot access \'%s\': No such file or directory",full_path_name);
+				fprintf(stderr,"\ncannot access \'%s\': No such file or directory",full_path_name);
 				return;
 			}
 
@@ -59,7 +59,7 @@ void handle_l_and_R_flag(char *filename){
 	struct stat file_info;
 
 	if(stat(filename,&file_info) == -1){
-		fprintf(stderr,"cannot access \'%s\': No such file or directory",filename);
+		fprintf(stderr,"\ncannot access \'%s\': No such file or directory",filename);
 		return;
 	}
 
@@ -69,7 +69,7 @@ void handle_l_and_R_flag(char *filename){
 		
 
 		if((Dir = opendir(filename)) == NULL){
-			fprintf(stderr,"cannot access \'%s\': No such file or directory",filename);
+			fprintf(stderr,"\ncannot access \'%s\': No such file or directory",filename);
 			return;
 		}
 
@@ -92,7 +92,7 @@ void handle_R_flag(char *filename){
 	struct stat file_info;
 
 	if(stat(filename,&file_info) == -1){
-		fprintf(stderr,"cannot access \'%s\': No such file or directory",filename);
+		fprintf(stderr,"\ncannot access \'%s\': No such file or directory",filename);
 		return;
 	}
 
@@ -102,7 +102,7 @@ void handle_R_flag(char *filename){
 		
 
 		if((Dir = opendir(filename)) == NULL){
-			fprintf(stderr,"cannot access \'%s\': No such file or directory",filename);
+			fprintf(stderr,"\ncannot access \'%s\': No such file or directory",filename);
 			return;
 		}
 

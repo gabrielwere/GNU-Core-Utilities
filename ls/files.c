@@ -57,13 +57,13 @@ void print_filename(char *filename){
 	struct stat file_info;
 
 	if(stat(filename,&file_info) == -1){
-		fprintf(stderr,"cannot access \'%s\': No such file or directory",filename);
+		fprintf(stderr,"\ncannot access \'%s\': No such file or directory",filename);
 		return;
 	}
 
 	if(S_ISDIR(file_info.st_mode)){
 		if((Dir = opendir(filename)) == NULL){
-			fprintf(stderr,"cannot access \'%s\': No such file or directory",filename);
+			fprintf(stderr,"\ncannot access \'%s\': No such file or directory",filename);
 			return;
 		}
 
@@ -79,7 +79,7 @@ void print_filename(char *filename){
 			sprintf(full_path_name,"%s/%s",filename,Dirent->d_name);
 
 			if(stat(full_path_name,&file_info) == -1){
-				fprintf(stderr,"cannot access \'%s\': No such file or directory",full_path_name);
+				fprintf(stderr,"\ncannot access \'%s\': No such file or directory",full_path_name);
 				return;
 			}
 
