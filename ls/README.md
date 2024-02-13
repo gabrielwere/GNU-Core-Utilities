@@ -24,3 +24,12 @@ cc -g ls.c helpers.c flags.c files.c -o ls
 
 Note : Output for the -R flag could use some formatting
 
+### Sample output
+
+#### Sample One
+![Sample One](samples/sample1.png)
+#### Sample Two
+![Sample Two](samples/sample2.png)
+#### Sample Three
+![Sample Three](samples/sample3.png)
+
