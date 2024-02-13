@@ -2,6 +2,7 @@
 #define FILE_FUNCTIONS
 
 #include "structs.h"
+#include <sys/stat.h>
 
 FILES *create_new_files_node(FILES *list);
 FILES *add_file_to_list(FILES *list,char *filename);
