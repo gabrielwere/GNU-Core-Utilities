@@ -49,13 +49,13 @@ int main(int argc,char *argv[]){
 		while(file_list != NULL){
 
 			if(l_flag && R_flag){
-				handle_l_and_R_flag(file_list->filename);
+				handle_R_flag(file_list->filename,&handle_l_flag);
 
 			}else if(l_flag){
 				handle_l_flag(file_list->filename);
 
 			}else if(R_flag){
-				handle_R_flag(file_list->filename);
+				handle_R_flag(file_list->filename,NULL);
 
 			}
 
@@ -70,13 +70,13 @@ int main(int argc,char *argv[]){
 		}
 	}else if(file_list == NULL && flags){
 		if(l_flag && R_flag){
-			handle_l_and_R_flag(".");
+			handle_R_flag(".",&handle_l_flag);
 
 		}else if(l_flag){
 			handle_l_flag(".");
 
 		}else if(R_flag){
-			handle_R_flag(".");
+			handle_R_flag(".",NULL);
 		}
 	}
 
