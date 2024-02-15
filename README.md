@@ -5,5 +5,6 @@ List of currently implemented utilities.
 
 `ls`<br/>
 `cat`<br/>
-`cp`
+`cp`<br/>
+`wc`
 
