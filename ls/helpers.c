@@ -1,6 +1,5 @@
 #include <time.h>
 
-#include "structs.h"
 
 char *give_time(long time_in_seconds){
   

@@ -1,4 +1,3 @@
-#include <stdlib.h>
 #include <dirent.h>
 #include <stdio.h>
 #include <string.h>
@@ -11,43 +10,6 @@
 #include "flags.h"
 #include "files.h"
 #include <time.h>
-
-FILES *create_new_files_node(FILES *list){
-	
-	if(list == NULL){
-		list = (FILES *) malloc (sizeof(FILES));
-		list->next = NULL;
-		return list;
-	}
-
-	return NULL;
-}
-
-FILES *add_file_to_list(FILES *list,char *filename){
-
-	FILES *new_node = NULL;
-	new_node = create_new_files_node(new_node);
-
-	new_node->filename = filename;
-
-	if(list == NULL){
-		list = new_node;
-		return list;
-	}else{
-
-		FILES *ptr = list;
-		while(ptr->next != NULL)
-			ptr = ptr->next;
-
-		ptr->next = new_node;
-	}
-
-	return list;
-}
-
-void free_file_list(FILES *list){
-	free(list);
-}
 
 void print_filename(char *filename){
 
